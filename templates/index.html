@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block carusel %}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('static', filename='images/first.jpg')}}" height="400px" class="d-block w-100" alt="first">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='images/second.jpg')}}" height="400px" class="d-block w-100" alt="second">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='images/third.jpg')}}" height="400px" class="d-block w-100" alt="third">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="bg-light p-5 rounded">
+  <div class="col-sm-8 mx-auto">
+    <h1>This is Blog Post Web app</h1>
+    <p>This example is a quick exercise to illustrate how the Flask App and its contents work. Some web apps extend the
+      width of the viewport, others are confined within a <code>.container</code>. For positioning of navbars, checkout
+      the <a href="/docs/5.0/examples/navbar-static/">top</a> and <a href="/docs/5.0/examples/navbar-fixed/">fixed
+        top</a> examples.</p>
+    <p>At the smallest breakpoint, the collapse plugin is used to hide the links and show a menu button to toggle the
+      collapsed content.</p>
+    <p>
+      <a class="btn btn-primary" href="/posts" role="button">View Posts »</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

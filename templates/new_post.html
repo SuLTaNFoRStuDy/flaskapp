@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Post</title>
+{% endblock %}
+
+{% block body %}
+
+<hr>
+<h2>New Post</h2>
+<form action="/posts/newPost" method="POST">
+
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" name='title' id="title" value="{{title}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Author</label>
+        <input type="text" class="form-control" name='author' id="author" value="{{author}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+        <textarea class="form-control" type="text" name="content" id="content" rows="3" >{{content}}</textarea>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-primary"  >Post</button>
+</form>
+<hr>
+
+{% endblock %}
